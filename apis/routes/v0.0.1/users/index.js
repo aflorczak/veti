@@ -8,11 +8,9 @@ router.post('/', (req, res) => {
     const email = req.body['email'];
     createUser(login, email)
         .then(result => {
-            console.log(result);
             res.json(result);
         })
         .catch(err => {
-            console.log(err);
             res.json(err);
         })
 });
@@ -21,12 +19,9 @@ router.post('/', (req, res) => {
 router.get('/', (req,res) => {
     getUsers()
         .then(result => {
-            console.log(result);
             res.json(result);
         })
         .catch(err => {
-            // Correct at the time of creation in the error handler application.
-            console.log(err);
             res.json(err);
         });
 });
@@ -36,12 +31,9 @@ router.get('/:login', (req, res) => {
     const login = req.params['login'];
     getUserByLogin(login)
         .then(result => {
-            console.log(result);
             res.json(result);
         })
         .catch(err => {
-            // Correct at the time of creation in the error handler application.
-            console.log(err);
             res.json(err);
         });
 });
@@ -53,14 +45,12 @@ router.put('/:login', (req, res) => {
     const newEmail = req.body['newEmail'];
     updateUserByLogin(login, newLogin, newEmail)
         .then(result => {
-            console.log(result);
             res.json({
                 msg: "Updated User",
                 result: result
             });
         })
         .catch(err => {
-            console.log(err);
             res.json(err);
         })
 });
@@ -70,14 +60,12 @@ router.delete('/:login', (req, res) => {
     const login = req.params['login'];
     deleteUserByLogin(login)
         .then(result => {
-            console.log(result);
             res.json({
                 msg: "Deleted User",
                 result: result
             });
         })
         .catch(err => {
-            console.log(err);
             res.json(err);
         })
 });

@@ -9,8 +9,21 @@
     {{else}}
     <title>{{getDomain}} - {{getSlogan}}</title>
     {{/if}}
+    <!-- set global css -->
+
+    <!-- set local css -->
+    {{#if styles}}
+        <link rel="stylesheet" href="{{styles}}">
+    {{/if}}
 </head>
 <body>
     {{{body}}}
+
+    <!-- set global js -->
+
+    <!-- set local js -->
+    {{#if scripts}}
+        <script src="{{scripts}}"></script>
+    {{/if}}
 </body>
 </html>

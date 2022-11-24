@@ -9,7 +9,6 @@ const app = express();
 
 app.use('/api', apisRouter);
 
-
 const hbs = create({
     helpers: {
         getDomain() { return process.env.DOMAIN },

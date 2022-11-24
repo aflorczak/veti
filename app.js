@@ -3,10 +3,11 @@ dotenv.config();
 import express from 'express';
 import { create } from 'express-handlebars';
 import viewsRouter from './views/routes/index.js';
+import apisRouter from './apis/routes/index.js';
 
 const app = express();
 
-// RestAPI routes here
+app.use('/api', apisRouter);
 
 
 const hbs = create({

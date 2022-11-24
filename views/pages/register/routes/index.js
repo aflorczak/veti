@@ -2,9 +2,9 @@ import express from 'express';
 const router = express.Router();
 
 router.get('/', (req,res) => {
-    res.render('pages/homePage/views/index', {
-        msg: 'Hello Veti',
-        title: "Hello Veti"
+    res.render('pages/register/views/index', {
+        msg: 'Panel rejestracji',
+        title: "Zarejestruj się"
     });
 });
 

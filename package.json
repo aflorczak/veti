@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aflorczak/veti/issues"
   },
-  "homepage": "https://github.com/aflorczak/veti#readme"
+  "homepage": "https://github.com/aflorczak/veti#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }

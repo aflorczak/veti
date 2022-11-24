@@ -1,11 +1,7 @@
 import express from 'express';
+import homeRouter from './../pages/homePage/routes/index.js';
 const router = express.Router();
 
-router.get('/', (req,res) => {
-    res.render('pages/home/index', {
-        msg: 'Hello Veti',
-        title: "Hello Veti"
-    });
-});
+router.use('/', homeRouter);
 
 export default router;
